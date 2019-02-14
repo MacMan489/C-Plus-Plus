@@ -1,0 +1,583 @@
+cin.ignore(791,'/n');
+write a calculator program in c++. The calculator will allow the user to perform the following operations. ALL of these operations MUST be done in separate functions
+
+write a c++ program to Get the area of a square
+
+write a c++ program to Get the exponent of 2 integers
+
+write a c++ program to Get the quotient of 2 integers
+
+write a c++ program to Get the real division of 2 integers
+
+write a c++ program to Get the remainder of 2 integers
+
+write a c++ program to get Multiplication
+
+write a c++ program to get Subtraction
+
+write a c++ program to get Additiorn
+
+write a c++ program to Convert from decimal to bases 2 -16
+
+write a c++ program to Get Factorial
+
+write a c++ program to Find out if an integer is even or odd
+
+Get the area of a circle
+
+Get the area of a rightlisosceles triangle
+
+
+1.
+
+Calculator program:
+
+#include <iostream>
+
+using namespace std;
+
+//function declaration
+
+int addFun(int, int);
+
+int subtractFun(int, int);
+
+int multiplyFun(int, int);
+
+float divisionFun(float, float);
+
+//main function
+
+int main()
+
+{
+
+    //declare variable p and q for two number
+
+     double p, q;
+
+     //declare the variable opt for option
+
+     int opt;
+
+         //check the option using while loop
+
+          while (opt != 5)
+
+          {
+
+          cout << "Enter two number: ";
+
+          cin >> p >> q;
+
+          cout << endl;
+
+          cout
+
+          << "1. Addition" << endl
+
+          << "2. Subtraction" << endl
+
+          << "3. Multiplication" << endl
+
+          << "4. Division" << endl
+
+          << "5. Quit" << endl;
+
+          cout << endl << "Select your chioce: ";
+
+          cin >> opt;
+
+          cout << endl;
+
+          switch (opt) {
+
+              case 1:
+
+                  //call the add function
+
+                   cout << p << " + " << q << " = " << addFun(p,q) << endl;
+
+                   break;
+
+              case 2:
+
+                  //call the sub function
+
+                   cout << p << " - " << q << " = " << subtractFun(p,q) << endl;
+
+                   break;
+
+              case 3:
+
+                  //call the multiply function
+
+                   cout << p << " * " << q << " = " <<multiplyFun(p,q) << endl;
+
+                   break;
+
+              case 4:
+
+                  //call the division function
+
+                   cout << p << "/" << q << " = " <<divisionFun(p,q) << endl;
+
+                   break;
+
+              case 5:
+
+                   break;
+
+              default:
+
+                   cout << "Wrong option." << endl;
+
+                   break;
+
+          }
+
+          cout << endl;
+
+     }
+
+}
+
+//function definition
+
+int addFun(int p,int q)
+
+{
+
+    int ans = p + q;
+
+    return ans;
+
+}
+
+int subtractFun(int p,int q)
+
+{
+
+    int ans = p - q;
+
+    return ans;
+
+}
+
+int multiplyFun(int p,int q)
+
+{
+
+    int ans = p * q;
+
+    return ans;
+
+}
+
+float divisionFun(float p,float q)
+
+{
+
+    float ans = p / q;
+
+    return ans;
+
+}
+
+2.
+
+Get the area of a square:
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+//declare variable the area and side s
+
+int area, s;
+
+//get the side
+
+cout<<"Enter the side: ";
+
+cin>>s;
+
+//area formula for square
+
+area = s*s;
+
+//print the area
+
+cout<<"Area of a square is: "<<area;
+
+return 0;
+
+}
+
+3.
+
+Exponent of 2 integers:
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+    int n, exp;
+
+   
+
+    cout << "Enter n value: ";
+
+    cin >> n;
+
+    cout << "Enter exp value: ";
+
+    cin >> exp;
+
+   
+
+    for (int a=0; a<=exp; a++)
+
+        n= n*n;
+
+        cout << "Result is: " << n;
+
+}
+
+4.
+
+Quotient of 2 integers:
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+    //declare the two numbers p and q
+
+    //declare variable qt for quotient
+
+    double p, q, qt;
+
+    //get two numbers
+
+    cout<<"Enter two numbers: ";
+
+    cin>>p>>q;
+
+    //find the quotient
+
+    qt=p/q;
+
+    cout<<"Quotient is: "<<qt;
+
+    return 0;
+
+}
+
+5.
+
+Real division of 2 integers:
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+    //declare the two numbers p and q
+
+    //declare variable qt for division
+
+    int p, q, qt;
+
+    //get two numbers
+
+    cout<<"Enter two numbers: ";
+
+    cin>>p>>q;
+
+    //find the real division
+
+    qt=p/q;
+
+    cout<<"Division is: "<<qt;
+
+    return 0;
+
+}
+
+6.
+
+Remainder of 2 integers:
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+    //declare the two numbers p and q
+
+    //declare variable rem for remainder
+
+    int p, q, rem;
+
+    //get two numbers
+
+    cout<<"Enter two numbers: ";
+
+    cin>>p>>q;
+
+    //find the remainder
+
+    rem=p%q;
+
+    cout<<"Remainder is: "<<rem;
+
+    return 0;
+
+}
+
+7.
+
+Multiplication:
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+    //declare the two numbers p and q
+
+    //declare variable ans
+
+    int p, q, ans;
+
+    //get two numbers
+
+    cout<<"Enter two numbers: ";
+
+    cin>>p>>q;
+
+    //find the multiplication
+
+    ans=p*q;
+
+    cout<<"Multiplication is: "<<ans;
+
+    return 0;
+
+}
+
+8.
+
+Subtraction:
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+    //declare the two numbers p and q
+
+    //declare variable ans
+
+    int p, q, ans;
+
+    //get two numbers
+
+    cout<<"Enter two numbers: ";
+
+    cin>>p>>q;
+
+    //find the subtraction
+
+    ans=p-q;
+
+    cout<<"Subtraction is: "<<ans;
+
+    return 0;
+
+}
+
+9.
+
+Addition:
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+    //declare the two numbers p and q
+
+    //declare variable ans for addition
+
+    int p, q, ans;
+
+    //get two numbers
+
+    cout<<"Enter two numbers: ";
+
+    cin>>p>>q;
+
+    //find the addition
+
+    ans=p+q;
+
+    cout<<"Addition is: "<<ans;
+
+    return 0;
+
+}
+
+10.
+
+Factorial of a number:
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+    //declare the number
+
+    int num;
+
+    long fact= 1;
+
+    cout << "Enter a number: ";
+
+    cin >> num;
+
+    for(int a= 1; a <=num; ++a)
+
+    {
+
+        fact*= a;
+
+    }
+
+    cout << "Factorial of " << num << " = " << fact;   
+
+    return 0;
+
+}
+
+11.
+
+Find out if an integer is even or odd:
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+    int num;
+
+    cout << "Enter a number: ";
+
+    cin >> num;
+
+    if ( num % 2 == 0)
+
+        cout << "The number " << num << " is even";
+
+    else
+
+        cout << "The number " << num << " is odd";
+
+    return 0;
+
+}
+
+12.
+
+Area of a circle
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+     float ra,area;
+
+     cout<< "Enter the radius: ";
+
+     cin>>ra;
+
+     area = 3.14*ra*ra;
+
+     cout<<"Area of circle: "<<area;
+
+     return 0;
+
+}
+
+13.
+
+Area of a rightlisosceles triangle:
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+//declare variable the area and base
+
+int area, base;
+
+//get the side
+
+cout<<"Enter the base: ";
+
+cin>>base;
+
+//area formula for isosceles right triangle
+
+area = (base*base)/2;
+
+//print the area
+
+cout<<"Area of isosceles right triangle is: "<<area;
+
+return 0;
+
+}
