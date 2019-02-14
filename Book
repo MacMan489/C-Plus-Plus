@@ -1,0 +1,44 @@
+cin.ignore(503,'/n');
+Write a C++ program to create a file named "Books.dat" to store the names of 5 books. Accept the book names from the user.Then, employ a function search() which searches the books entered by the user.
+For example, the output of the program must look as follows:
+Enter any 5 books:
+Organic Chemistry
+Objective Physics
+Calculus
+Computer Science
+Objective Mathematics
+Enter a word or phrase in the name of the book:Objective
+The books with the phrase 'Objective' are
+Objective Physics
+Objective Mathematics
+
+#include<fstream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<string.h>
+
+void main()
+{
+   clrscr();
+   char book[31],sub[31];
+   fstream file;
+   file.open("Myfile.dat",ios::binary|ios::out|ios::in);
+   for(int i=0;i<3;++i)
+   {
+      cout<<"\nEnter book name:";
+      gets(book);
+      file<<book<<"\n";
+   }
+   cout<<"\nEnter a word or phrase in the bookname: ";
+   gets(sub);
+   file.seekg(0);
+   while(file.eof()==0)
+   {
+      file.getline(book,31);
+      if(strstr(book,sub)!=0)
+      cout<<"\n\nBook:"<<book;
+   }
+   file.close();
+   cout<<"\nPress any key to exit";
+   getch();
+}
